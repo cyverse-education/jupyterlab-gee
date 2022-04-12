@@ -47,3 +47,28 @@ Qiusheng Wu is an assistant professor at University of Tennessee. He is the lead
 [Google CoLab and GEE](https://colab.research.google.com/github/csaybar/EEwPython/blob/dev/1_Introduction.ipynb) 
 
 [EarthLab Intro to Python and GEE](https://earthlab.colorado.edu/introduction-google-earth-engine-python-api)
+
+# Create `geospatial` environment yourself
+
+Qiusheng has released a `geospatial` package for GEE, which is very useful.
+
+We have a second, expanded version with a few more packages.
+
+To deploy the environment in a Jupyterlab, first buid the conda environment in Terminal. Note, we're using `mamba` which is packaged with Jupyter Lab and is faster
+
+```{bash}
+mamba env create -f environment.yml
+```
+
+After the environment creates, activate it from Terminal
+
+```{bash}
+conda activate geospatial
+```
+
+To add the kernel to a notebook environment in Jupyter, use the Terminal
+
+```{bash}
+source activate geospatial
+python -m ipykernel install --user --name geospatial --display-name "Python (Geospatial)"
+```
